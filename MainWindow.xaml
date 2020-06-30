@@ -29,13 +29,8 @@
                 </StackPanel>
                 <Separator/>
                 <StackPanel   Orientation="Horizontal">
-                    <Label x:Name="labelSlaskie" Content="uzupełnij dane z województwa Śląskiego"/>
+                    <Label x:Name="labelSlaskie" Content="Uzupełnij dane z województwa Śląskiego"/>
                     <Button x:Name="DodajSlaskie" Content="Dodaj" Click="DodajSlaskie_Click"  Margin="10,0,0,0" Width="100"/>
-                </StackPanel>
-                <Separator/>
-                <StackPanel   Orientation="Horizontal">
-                    <Label x:Name="labelZarejestrowaniPolska" Content="Liczba osób uprawnionych do głosowania w Polsce:  "/>
-                    <TextBlock x:Name="textBlockUprawnieniPolska" VerticalAlignment="Center"/>
                 </StackPanel>
                 <Separator/>
                 <StackPanel   Orientation="Horizontal">
@@ -44,18 +39,8 @@
                 </StackPanel>
                 <Separator/>
                 <StackPanel   Orientation="Horizontal">
-                <Label x:Name="labelZarejestrowaniSlaskie" Content="Liczba osób uprawnionych do głosowania w województwie Śląskim:  "/>
-                    <TextBlock x:Name="textBlockUprawnieniSlaskie" VerticalAlignment="Center"/>
-                </StackPanel>
-                <Separator/>
-                <StackPanel   Orientation="Horizontal">
                     <Label x:Name="labelZaglosowaliSlaskie" Content="Liczba osób które zagłosowało w w województwie Śląskim:  "/>
                     <TextBlock x:Name="textBlockZaglosowaliSlaskie" VerticalAlignment="Center"/>
-                </StackPanel>
-                <Separator/>
-                <StackPanel   Orientation="Horizontal">
-                    <Label x:Name="labelZarejestrowaniDG" Content="Liczba osób uprawnionych do głosowania w Dąbrowie Górniczej:  "/>
-                    <TextBlock x:Name="textBlockUprawnieniDG" VerticalAlignment="Center"/>
                 </StackPanel>
                 <Separator/>
                 <StackPanel   Orientation="Horizontal">

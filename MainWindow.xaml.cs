@@ -15,9 +15,13 @@ using System.Windows.Shapes;
 
 namespace Frekwencja
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    /*
+    Jednostki andministracyjne w Polsce mają budowę hierarchiczną, tzn Kraj dzieli się na województwa, które dzielą się na
+    powiaty, które zawierają  w sobie gminy. Do przedstawienia tego podziału dobrze nadaje się wzorzec kompozyt, ze względu na budowę
+    podziału. Wzorzec ten obrazuje przynależności.
+    Oprócz przynależności wzorzec również sprawdza się do gromadzenia i sumowania danych z różnych jednostek
+    
+    */
     public partial class MainWindow : Window
     {
 
@@ -63,12 +67,9 @@ namespace Frekwencja
                 listBox.Items.Add(das);
             listBox.Items.Refresh();
             //Wykorzystując te same funckje mamy dostęp do każdego elementu hierarhii Od pierwszego kompozytu do ostatniego liścia
-            textBlockUprawnieniPolska.Text = kraj.SumaZarejestrowanych().ToString();
-            textBlockZaglosowaliPolska.Text = kraj.SumaGlosujacych().ToString();
-            textBlockUprawnieniSlaskie.Text = s.SumaZarejestrowanych().ToString();
-            textBlockZaglosowaliSlaskie.Text = s.SumaGlosujacych().ToString();
-            textBlockUprawnieniDG.Text = d.SumaZarejestrowanych().ToString();
-            textBlockZaglosowaliDG.Text = d.SumaGlosujacych().ToString();
+            textBlockZaglosowaliPolska.Text = kraj.SumaGlosujacych().ToString()+" / "+ kraj.SumaZarejestrowanych().ToString();
+            textBlockZaglosowaliSlaskie.Text = s.SumaGlosujacych().ToString() + " / " + s.SumaZarejestrowanych().ToString();
+            textBlockZaglosowaliDG.Text = d.SumaGlosujacych().ToString() + " / " +d.SumaZarejestrowanych().ToString();
         }
 
         private void Dodaj_Click(object sender, RoutedEventArgs e)
